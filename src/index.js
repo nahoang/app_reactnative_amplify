@@ -1,12 +1,12 @@
 import React from 'react'
 import { StatusBar } from 'react-native'
-import Amplify from '@aws-amplify/core'
+// import Amplify from '@aws-amplify/core'
 import PubSub from '@aws-amplify/pubsub'
 import * as Keychain from 'react-native-keychain'
 import AppNavigator from './AppNavigator'
 import { Localei18n } from './components'
 import awsconfig from '../aws-exports'
-// import Amplify, { Auth } from 'aws-amplify'
+import Amplify, { Auth } from 'aws-amplify'
 
 const MEMORY_KEY_PREFIX = '@MyStorage:'
 let dataMemory = {}
@@ -42,7 +42,7 @@ Amplify.configure({
   },
   storage: MyStorage
 })
-// Auth.configure(awsconfig)
+Auth.configure(awsconfig)
 PubSub.configure(awsconfig)
 
 const App = () => (
