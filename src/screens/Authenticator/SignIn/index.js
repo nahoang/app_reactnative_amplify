@@ -10,8 +10,8 @@ const Form = t.form.Form // eslint-disable-line
 
 const SignIn = ({ navigation }) => {
   const [userInfo, setUserInfo] = useState({
-    email: 'raoffonom@icloud.com',
-    password: 'qwerty123'
+    email: 'nahoang9698@gmail.com',
+    password: ''
   })
 
   const [loading, setLoading] = useState(false)
