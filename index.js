@@ -2,15 +2,16 @@
  * @format
  */
 
-import { AppRegistry, YellowBox } from 'react-native'
+import { AppRegistry, LogBox } from 'react-native'
 import App from './src'
 import { name as appName } from './app.json'
 
-YellowBox.ignoreWarnings([
+LogBox.ignoreWarnings([
   'Warning: componentWillReceiveProps',
   'RCTRootView cancelTouches',
   'not authenticated',
-  'Sending `onAnimatedValueUpdate`'
+  'Sending `onAnimatedValueUpdate`',
+  'Animated: `useNativeDriver`'
 ])
 
 //window.LOG_LEVEL = 'DEBUG'
